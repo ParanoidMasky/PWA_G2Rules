@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>El Masky's PWA</title>
+    <meta name="description" content="Hello World">
+
+    <meta name="theme-color" content="#000000">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="./img/G2logo.png">
+    <link rel="apple-touch-icon" href="./G2logo.png">
+    <link rel="apple-touch-startup-image" href="./G2logo.png">
+    <link rel="manifest" href="./manifest.json">
+
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="head-title">Cynet Masky Blog</h1>
+
+    <header class="Header">
+        <br>
+
+        <h2>My E-sports Team</h2>
+        <p>G2 E-sports</p>
+        <img src="./img/G2logo.png" alt="#Origen">
+
+        <br><br>
+
+        <table class="table-cont">
+            <tr>
+                <th>
+                    <h2>League of Legends</h2>
+                </th>
+                <th>
+                    <h2>Rainbow 6 Siege</h2>
+                </th>
+                <tr>
+                    <td> Favorite champ. </td>
+                    <td> Favorite Operator. </td>
+                </tr>
+                <tr>
+                    <td> <iframe src='https://gfycat.com/ifr/AngrySardonicIraniangroundjay' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe></td>
+                    <td><iframe src='https://gfycat.com/ifr/OccasionalApprehensiveHectorsdolphin' frameborder='0' scrolling='no' allowfullscreen width='640' height='404'></iframe></td>
+                </tr>
+            </tr>
+        </table>
+        <br><br>
+        <h2>Masky's favorite Pokemon's </h2>
+
+        <br><br>
+
+        <div id='element'>
+            <!-- api goes here-->
+        </div>
+        <br><br>
+
+        <div id='elem'>
+
+        </div>
+    </header>
+    </div>
+
+
+    <!--script-->
+    <script src="./script.js "></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Registro de SW exitoso', reg))
+                .catch(err => console.warn('Error al registrar SW', err))
+        }
+    </script>
+
+</body>
+
+</html>
