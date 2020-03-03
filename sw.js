@@ -1,6 +1,6 @@
 //asignar un nombre y versión al cache
-const CACHE_NAME = 'v1_PWA';
-const Data_CACHE_NAME = 'api-chache-v1';
+const CACHE_NAME = 'Cache_saved';
+const Data_CACHE_NAME = 'PokeCache';
 
 
 //guardar en caché
@@ -10,9 +10,13 @@ const urlsToCache = [
     './style.css',
     './script.js',
     './img/G2logo.png',
-    './img/favicon.png',
+    './img/mini.png',
     './index.html',
-    'https://jsonplaceholder.typicode.com/posts'
+    'https://pokeapi.co/api/v2/pokemon/blaziken',
+    'https://pokeapi.co/api/v2/pokemon/decidueye',
+    'https://pokeapi.co/api/v2/pokemon/heracross',
+    'https://pokeapi.co/api/v2/pokemon/infernape',
+    'https://pokeapi.co/api/v2/pokemon/garchomp'
 ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
@@ -51,7 +55,7 @@ self.addEventListener('activate', e => {
 //cuando el navegador recupera una url
 self.addEventListener('fetch', e => {
     //Url del cache
-    var data_Url = '/posts';
+    var data_Url = '/blaziken';
 
     if (e.request.url.indexOf(data_Url) === 0) {
         //Manejador de datos 
